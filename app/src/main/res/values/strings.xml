@@ -1,0 +1,31 @@
+<resources>
+    <!-- App title and fragment titles -->
+    <string name="app_name">Task 4 - Cars catalogue</string>
+    <string name="carListFragment">Cars list</string>
+    <string name="carDetailsFragment">Car details</string>
+    <string name="settings_activity_title">Settings</string>
+
+    <string name="order_settings_key">order_settings</string>
+    <string name="order_settings_title">Sort cars by:</string>
+    <string name="order_settings_default">0</string>
+
+    <string name="cars">Cars</string>
+    <string name="brand">Brand:</string>
+    <string name="model">Model:</string>
+    <string name="year">Year:</string>
+    <string name="submit">Submit</string>
+
+    <string name="settings_button">Settings button</string>
+    <string name="clear_all_button">Clear DB</string>
+
+    <string name="card_dialog_message">Card dialog</string>
+    <string name="clear_all_dialog_message">Clear all?</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="clear_all_dialog_tag">clear all dialog</string>
+    <string name="card_dialog_dialog_tag">card dialog</string>
+
+    <string name="update_feature_not_implemented">Update feature is not implemented…</string>
+</resources>

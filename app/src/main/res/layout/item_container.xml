@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="car"
+            type="com.example.task4.database.Car" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/car_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginVertical="@dimen/vertical_margin"
+        android:longClickable="true"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="@dimen/stroke_width">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/brand_label"
+                style="@style/LabelTextViewStyle"
+                android:text="@string/brand"
+                app:layout_constraintEnd_toStartOf="@id/brand_value"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".30" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/brand_value"
+                style="@style/ValueTextViewStyle"
+                android:text="@{car.brand}"
+                app:layout_constraintStart_toEndOf="@+id/brand_label"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Mazda" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/model_label"
+                style="@style/LabelTextViewStyle"
+                android:text="@string/model"
+                app:layout_constraintEnd_toStartOf="@id/model_value"
+                app:layout_constraintTop_toBottomOf="@+id/brand_label"
+                app:layout_constraintWidth_percent=".30" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/model_value"
+                style="@style/ValueTextViewStyle"
+                android:text="@{car.model}"
+                app:layout_constraintStart_toEndOf="@+id/model_label"
+                app:layout_constraintTop_toBottomOf="@+id/brand_value"
+                tools:text="MX-5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/year_label"
+                style="@style/LabelTextViewStyle"
+                android:text="@string/year"
+                app:layout_constraintEnd_toStartOf="@id/year_value"
+                app:layout_constraintTop_toBottomOf="@+id/model_label"
+                app:layout_constraintWidth_percent=".30" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/year_value"
+                style="@style/ValueTextViewStyle"
+                android:text="@{car.year}"
+                app:layout_constraintStart_toEndOf="@+id/year_label"
+                app:layout_constraintTop_toBottomOf="@+id/model_value"
+                tools:text="1997" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
